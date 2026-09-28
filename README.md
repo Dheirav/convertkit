@@ -111,3 +111,7 @@ jobs/          per-job scratch, swept after an hour
   through `run_in_threadpool`. Keep it that way.
 - Bound to `127.0.0.1` deliberately. Don't move it to `0.0.0.0` without adding
   auth, since it will happily convert anything anyone sends it.
+
+## License
+
+[MIT](LICENSE).
