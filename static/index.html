@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>convertkit</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <h1>convertkit</h1>
+  <p class="sub">Local file conversion. Nothing leaves this machine.</p>
+</header>
+
+<main>
+  <section id="drop" class="drop" tabindex="0" role="button" aria-label="Drop files here or click to browse">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/></svg>
+    <p class="big">Drop files here</p>
+    <p class="hint">or click to browse &middot; PDFs, images, documents, audio, video</p>
+    <input type="file" id="picker" multiple hidden>
+  </section>
+
+  <section id="files" class="panel" hidden>
+    <div class="panel-head">
+      <h2>Files</h2>
+      <button class="link" id="clear">Start over</button>
+    </div>
+    <ul id="filelist" class="filelist"></ul>
+  </section>
+
+  <section id="tools" class="panel" hidden>
+    <div class="panel-head"><h2>What would you like to do?</h2></div>
+    <div id="toolgrid"></div>
+  </section>
+
+  <section id="run" class="panel" hidden>
+    <div class="panel-head">
+      <h2 id="run-title">Options</h2>
+      <button class="link" id="back">Pick another tool</button>
+    </div>
+    <p id="run-blurb" class="blurb"></p>
+    <form id="params" class="params"></form>
+    <button id="go" class="primary">Convert</button>
+    <p id="status" class="status" hidden></p>
+  </section>
+
+  <section id="results" class="panel" hidden>
+    <div class="panel-head">
+      <h2>Done</h2>
+      <button class="link" id="again">Convert something else</button>
+    </div>
+    <ul id="resultlist" class="filelist"></ul>
+    <a id="zip" class="primary" hidden download>Download all as .zip</a>
+  </section>
+</main>
+
+<footer>
+  <details>
+    <summary>Engines on this machine</summary>
+    <ul id="engines" class="engines"></ul>
+  </details>
+</footer>
+
+<script src="/app.js"></script>
+</body>
+</html>
